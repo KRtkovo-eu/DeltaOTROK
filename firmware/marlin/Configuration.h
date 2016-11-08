@@ -4,8 +4,8 @@
 //===========================================================================
 //==========================Kossel 3D printer ======================
 //===========================================================================
-#define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ 
-#define STRING_CONFIG_H_AUTHOR "(Kossel KOSSEL)" 
+#define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__
+#define STRING_CONFIG_H_AUTHOR "(Kossel KOSSEL)"
 
 #define SERIAL_PORT 0
 
@@ -53,7 +53,7 @@
 // 21 = Elefu Ra Board (v3)
 
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 33 
+#define MOTHERBOARD 33
 #endif
 
 
@@ -83,10 +83,10 @@
 #define DELTA_SEGMENTS_PER_SECOND 160
 
 // Center-to-center distance of the holes in the diagonal push rods
-#define DELTA_DIAGONAL_ROD 221.0// mm
+#define DELTA_DIAGONAL_ROD 219.0// mm
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 153.0// mm
+#define DELTA_SMOOTH_ROD_OFFSET 151.0// mm
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 24.0 // mm
@@ -102,10 +102,10 @@
 // Effective X/Y positions of the three vertical towers.
 #define SIN_60 0.8660254037844386
 #define COS_60 0.5
-#define SIN_59 0.8571673007021122  
+#define SIN_59 0.8571673007021122
 #define COS_59 0.5150380749100542
-#define SIN_61 0.8746197071393958  
-#define COS_61 0.4848096202463370 
+#define SIN_61 0.8746197071393958
+#define COS_61 0.4848096202463370
 #define DELTA_TOWER1_X (-SIN_61*DELTA_RADIUS)
 #define DELTA_TOWER1_Y (-COS_61*DELTA_RADIUS)
 #define DELTA_TOWER2_X (SIN_59*DELTA_RADIUS)
@@ -114,7 +114,7 @@
 #define DELTA_TOWER3_Y (DELTA_RADIUS)
 
 #define DELTA_DIAGONAL_ROD_2 pow(DELTA_DIAGONAL_ROD,2)
-#define DELTA_DIAGONAL_ROD_2_x (DELTA_DIAGONAL_ROD*80)/80 //use formula (DELTA_DIAGONAL_ROD*measured_lenght)/expected_length of calibration object 
+#define DELTA_DIAGONAL_ROD_2_x (DELTA_DIAGONAL_ROD*80)/80 //use formula (DELTA_DIAGONAL_ROD*measured_lenght)/expected_length of calibration object
 #define DELTA_DIAGONAL_ROD_2_y (DELTA_DIAGONAL_ROD*80)/80
 #define DELTA_DIAGONAL_ROD_2_z (DELTA_DIAGONAL_ROD*80)/80
 
@@ -155,7 +155,7 @@
 
 // This makes temp sensor 1 a redundant sensor for sensor 0. If the temperatures difference between these sensors is to high the print will be aborted.
 //#define TEMP_SENSOR_1_AS_REDUNDANT
-#define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10, 
+#define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10,
 
 // Actual temperature must be close to target for this long before M109 returns success
 #define TEMP_RESIDENCY_TIME 10  // (seconds)
@@ -166,7 +166,7 @@
 // to check that the wiring to the thermistor is not broken.
 // Otherwise this would lead to the heater being powered on all the time.
 
-#define HEATER_0_MINTEMP 5 
+#define HEATER_0_MINTEMP 5
 #define HEATER_1_MINTEMP 5
 #define HEATER_2_MINTEMP 5
 #define BED_MINTEMP 5
@@ -174,10 +174,10 @@
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 275 
+#define HEATER_0_MAXTEMP 275
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
-#define BED_MAXTEMP 120 
+#define BED_MAXTEMP 120
 
 // If your bed has low resistance e.g. .6 ohm and throws the fuse you can duty cycle it to reduce the
 // average current. The value should be an integer and the heat bed will be turned on for 1 interval of
@@ -197,13 +197,13 @@
   #define PID_INTEGRAL_DRIVE_MAX 255  //limit for the integral term
   #define K1 0.95 //smoothing factor within the PID
   #define PID_dT ((OVERSAMPLENR * 8.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the temperature routine
-  
+
 // If you are using a preconfigured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
     #define  DEFAULT_Kp 22.2
     #define  DEFAULT_Ki 1.08
     #define  DEFAULT_Kd 114
-    
+
 // Makergear
 //    #define  DEFAULT_Kp 7.0
 //    #define  DEFAULT_Ki 0.1
@@ -240,7 +240,7 @@
     #define  DEFAULT_bedKp 10.00
     #define  DEFAULT_bedKi .023
     #define  DEFAULT_bedKd 305.4
-    
+
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
 //    #define  DEFAULT_bedKp 97.1
@@ -289,12 +289,12 @@
 #endif
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
-const bool X_MIN_ENDSTOP_INVERTING = false; 
-const bool Y_MIN_ENDSTOP_INVERTING = false; 
+const bool X_MIN_ENDSTOP_INVERTING = false;
+const bool Y_MIN_ENDSTOP_INVERTING = false;
 const bool Z_MIN_ENDSTOP_INVERTING = false;
-const bool X_MAX_ENDSTOP_INVERTING = false; 
+const bool X_MAX_ENDSTOP_INVERTING = false;
 const bool Y_MAX_ENDSTOP_INVERTING = false;
-const bool Z_MAX_ENDSTOP_INVERTING = false; 
+const bool Z_MAX_ENDSTOP_INVERTING = false;
 //#define DISABLE_MAX_ENDSTOPS
 //#define DISABLE_MIN_ENDSTOPS
 
@@ -344,14 +344,14 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 #define Z_MAX_LENGTH (Z_MAX_POS - Z_MIN_POS)
 //================= Kossel Self-leveling configuration ====================
 
-#define ENABLE_AUTO_BED_LEVELING // Auto-leveling feature is turned on or not. 
+#define ENABLE_AUTO_BED_LEVELING // Auto-leveling feature is turned on or not.
 
 #ifdef ENABLE_AUTO_BED_LEVELING
 
 
   #define DELTA_PROBABLE_RADIUS (DELTA_PRINTABLE_RADIUS-50)//Here the probe is set to leveling the range of movement,Increasing the leveling range, reduce the "-50" This value,Reducing leveling range, increase the "-50" value
   //如：#define DELTA_PROBABLE_RADIUS (DELTA_PRINTABLE_RADIUS-60)
-  
+
   #define LEFT_PROBE_BED_POSITION -DELTA_PROBABLE_RADIUS
   #define RIGHT_PROBE_BED_POSITION DELTA_PROBABLE_RADIUS
   #define BACK_PROBE_BED_POSITION DELTA_PROBABLE_RADIUS
@@ -362,17 +362,17 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
   #define Z_PROBE_OFFSET_FROM_EXTRUDER 1.0 //Automatic leveling settings,too high reduce,low increases
 
   #define Z_RAISE_BEFORE_HOMING 4       // Configuration of before homing, Z-axis height raised,the height must be ensured in the range of the maximum height in the Z-axis.
-  
-  #define XY_TRAVEL_SPEED 2000         //Automatic leveling speed of movement,increasing the speed increase, decrease speed reduction
+
+  #define XY_TRAVEL_SPEED 4000         //Automatic leveling speed of movement,increasing the speed increase, decrease speed reduction
 
   #define Z_RAISE_BEFORE_PROBING 80  ////Before the first pre-test point, Z-axis height raised, the height should ensure that the leveling sensors can normally be put down.
   #define Z_RAISE_BETWEEN_PROBINGS 5  //The next pre-test point,Z-axis height raised
 
-  #define Z_SAFE_HOMING   
+  #define Z_SAFE_HOMING
   #ifdef Z_SAFE_HOMING
 
-    #define Z_SAFE_HOMING_X_POINT (X_MAX_LENGTH/2)   
-    #define Z_SAFE_HOMING_Y_POINT (Y_MAX_LENGTH/2)   
+    #define Z_SAFE_HOMING_X_POINT (X_MAX_LENGTH/2)
+    #define Z_SAFE_HOMING_Y_POINT (Y_MAX_LENGTH/2)
 
   #endif
 
@@ -395,12 +395,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 279.5//306.6 // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 281.5//306.6 // For delta: Distance between nozzle and print surface after homing.
 //Because there will be differences for each machine installation, need your own measurement,after setting finished remember to keep Modify.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {60*60, 60*60, 60*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {200*60, 200*60, 200*60, 0}  // set the homing speeds (mm/min)
 
 #define XYZ_FULL_STEPS_PER_ROTATION 200 //Stepper motor weekly number of steps, namely 360 / stepper motor angle
 //For example, 1.8 degrees, the number of steps should be 360 / 1.8 = 200; if it is 0.9 degree motor 360 / 0.9 = 400.
@@ -411,17 +411,17 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 //This is the formula: number of subdivisions number * stepping stepper motor driver / belt tooth spacing / synchronous tooth number
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 151}   //Extruder amount
-#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}   
-#define DEFAULT_MAX_ACCELERATION      {3000,3000,3000,3000}    
+#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}
+#define DEFAULT_MAX_ACCELERATION      {3000,3000,3000,3000}
 
 //Acceleration configuration, when out of step if the print is too large, this value can be piecemeal
-#define DEFAULT_ACCELERATION          3000    
-#define DEFAULT_RETRACT_ACCELERATION  3000   
+#define DEFAULT_ACCELERATION          3000
+#define DEFAULT_RETRACT_ACCELERATION  3000
 
 //Do not need to speed up the distance between the axes, ie without acceleration, immediate completion of the distance (ie, software thinks he can complete in an instant)
-#define DEFAULT_XYJERK                20.0   
-#define DEFAULT_ZJERK                 20.0    
-#define DEFAULT_EJERK                 20.0  
+#define DEFAULT_XYJERK                20.0
+#define DEFAULT_ZJERK                 20.0
+#define DEFAULT_EJERK                 20.0
 
 //===========================================================================
 //===============================Additional Features====================================
