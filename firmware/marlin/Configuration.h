@@ -400,7 +400,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {200*60, 200*60, 200*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {120*60, 120*60, 120*60, 0}  // set the homing speeds (mm/min)
 
 #define XYZ_FULL_STEPS_PER_ROTATION 200 //Stepper motor weekly number of steps, namely 360 / stepper motor angle
 //For example, 1.8 degrees, the number of steps should be 360 / 1.8 = 200; if it is 0.9 degree motor 360 / 0.9 = 400.
